@@ -20,20 +20,20 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use( express.static('public') );
 
 
-app.get('/', (req, res) => {
-    res.render('home', data_hbs);
-});
+// app.get('/', (req, res) => {
+//     res.render('home', data_hbs);
+// });
 
-app.get('/generic', (req, res) => {
-    res.render('generic', data_hbs);
-});
+// app.get('/generic', (req, res) => {
+//     res.render('generic', data_hbs);
+// });
 
-app.get('/elements', (req, res) => {
-    res.render('elements', data_hbs);
-});
+// app.get('/elements', (req, res) => {
+//     res.render('elements', data_hbs);
+// });
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
